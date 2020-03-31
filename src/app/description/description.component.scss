@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  app-user {
+    width: 100%;
+  }
+  h3 {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(255, 218, 98, 0.28);
+  }
+  hr {
+    width: 100%;
+  }
+  .links > div {
+    display: flex;
+    a:nth-child(2) {
+      margin-left: 15px;
+    }
+  }
+}

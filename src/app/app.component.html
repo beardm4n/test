@@ -1,0 +1,18 @@
+<header>
+  <div class="container">
+    <a [routerLink]="['/']">
+      <h1>My "{{ title }}"</h1>
+    </a>
+    <a class='music-player' [routerLink]="['player']">Music Player</a>
+  </div>
+</header>
+
+<hr>
+
+<router-outlet></router-outlet>
+
+<hr>
+
+<footer>
+  <app-exchange-rates></app-exchange-rates>
+</footer>

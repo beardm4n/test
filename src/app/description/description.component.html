@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>{{ component.name }}</h2>
+
+  <p>{{ component.description }}</p>
+  <app-user></app-user>
+  <hr>
+
+  <div class="links">
+
+    <div *ngIf="count == 0">
+      <a [routerLink]="['/component', 1]">
+        <h4>{{ allComponents[1].name }}</h4>
+      </a>
+      <a [routerLink]="['/component', 2]">
+        <h4>{{ allComponents[2].name }}</h4>
+      </a>
+    </div>
+
+    <div *ngIf="count == 1">
+      <a [routerLink]="['/component', 0]">
+        <h4>{{ allComponents[0].name }}</h4>
+      </a>
+      <a [routerLink]="['/component', 2]">
+        <h4>{{ allComponents[2].name }}</h4>
+      </a>
+    </div>
+
+    <div *ngIf="count == 2">
+      <a [routerLink]="['/component', 0]">
+        <h4>{{ allComponents[0].name }}</h4>
+      </a>
+      <a [routerLink]="['/component', 1]">
+        <h4>{{ allComponents[1].name }}</h4>
+      </a>
+    </div>
+
+  </div>
+</div>

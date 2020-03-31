@@ -1,0 +1,43 @@
+<div class="container">
+  <h2 mat-dialog-title>Change name</h2>
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="userData">
+      <div class="firstName">
+        <label for="fName">First Name</label>
+        <input
+          id="fName"
+          type="text"
+          formControlName="firstName"
+          [placeholder]="user.firstName"
+        >
+        <div
+          *ngIf="form.get('firstName').invalid && form.get('firstName').touched"
+          class="validation"
+        >
+          <small>This field cannot be empty</small>
+        </div>
+      </div>
+      <div class="lastName">
+        <label for="lName">Last Name</label>
+        <input
+          id="lName"
+          type="text"
+          formControlName="lastName"
+          [placeholder]="user.lastName"
+        >
+        <div
+          *ngIf="form.get('lastName').invalid && form.get('lastName').touched"
+          class="validation"
+        >
+          <small>This field cannot be empty</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button mat-button class="btn" type="submit" [disabled]="form.invalid">Ok</button>
+      <button mat-button class="btn" type="button" (click)="onNoClick()">Cancel</button>
+    </div>
+  </form>
+</div>

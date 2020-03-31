@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="tracks">
+    <div *ngFor="let track of tracks">
+      <app-track-card
+        [composition]="track.composition"
+        [artist]="track.artist"
+        [time]="track.time"
+      ></app-track-card>
+    </div>
+  </div>
+
+  <div *ngIf="arrayOfNumPages" class="btn">
+    <button
+      mat-raised-button
+      *ngFor="let item of arrayOfNumPages; index as num"
+      (click)="changePage($event)"
+    >
+      {{ num + 1 }}
+    </button>
+  </div>
+</div>

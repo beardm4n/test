@@ -1,0 +1,32 @@
+header {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-decoration: none;
+
+      h1 {
+        padding: 10px;
+        border-radius: 25px;
+        background: rgba(254, 255, 158, 0.78);
+      }
+    }
+    .music-player {
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      background: rgba(118, 118, 118, 0.5);
+      padding: 25px;
+      color: black;
+      font-weight: 500;
+      &:hover {
+        box-shadow: 0 0 5px 1px rgba(56,56,56,0.5);
+        text-shadow: 0 0 5px 1px rgba(255, 141, 1, 0.5);
+      }
+    }
+  }
+}
+hr {
+  width: 50%;
+}

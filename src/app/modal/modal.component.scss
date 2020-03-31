@@ -1,0 +1,33 @@
+@mixin flexible() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  @include flexible();
+  form {
+    @include flexible();
+    .firstName, .lastName {
+      @include flexible();
+      margin-top: 15px;
+      input {
+        &.ng-invalid.ng-touched {
+          border: 1px solid red;
+        }
+        &.ng-valid.ng-touched {
+          border: 1px solid green;
+        }
+      }
+      div.validation {
+        color: red;
+      }
+    }
+    .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+    }
+  }
+}

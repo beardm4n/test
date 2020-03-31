@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+  .container-rates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    & div {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
