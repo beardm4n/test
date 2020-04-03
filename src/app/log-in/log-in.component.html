@@ -1,0 +1,38 @@
+<div class="container">
+  <form
+    [formGroup]="logInForm"
+    (ngSubmit)="submit()"
+  >
+    <div class="form-container">
+
+      <div class="email">
+        <label for="mail">Email:</label>
+        <input
+          id="mail"
+          type="email"
+          formControlName="email"
+        >
+      </div>
+
+      <div class="password">
+        <label for="pass">Password:</label>
+        <input
+          id="pass"
+          type="password"
+          formControlName="password"
+        >
+      </div>
+
+    </div>
+
+    <div class="btn-container">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+      >
+        Sign in
+      </button>
+    </div>
+  </form>
+</div>

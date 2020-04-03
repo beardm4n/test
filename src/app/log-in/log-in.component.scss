@@ -1,0 +1,50 @@
+@mixin flexible() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  @include flexible();
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  form {
+    @include flexible();
+    justify-content: space-around;
+    height: 300px;
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 130px;
+      label {
+        font-size: 13px;
+      }
+      input {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin-top: 5px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        font-size: 20px;
+      }
+      .password {
+        margin-top: 25px;
+      }
+    }
+    .btn-container {
+      align-self: center;
+      button {
+        background: rgb(77, 157, 181);
+      }
+    }
+  }
+}
