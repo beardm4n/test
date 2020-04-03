@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule} from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -39,6 +40,7 @@ import { UserComponent } from './user/user.component';
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
+    MatTabsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: AllComponentComponent } ,
