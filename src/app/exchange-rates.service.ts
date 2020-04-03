@@ -39,6 +39,6 @@ export class ExchangeRatesService {
   }
 
   getRates() {
-    return this.http.get(this.url + this.newDate);
+    return this.http.get('https://cors-anywhere.herokuapp.com/' + this.url + this.newDate);
   }
 }

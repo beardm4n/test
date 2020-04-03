@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { AllComponentComponent } from './all-component/all-component.component';
 import { DescriptionComponent } from './description/description.component';
 import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.component';
+import { LogInToRegisterComponent } from './log-in-to-register/log-in-to-register.component';
 import { ModalComponent } from './modal/modal.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
 import { TrackCardComponent } from './track-card/track-card.component';
@@ -24,6 +25,7 @@ import { UserComponent } from './user/user.component';
     AllComponentComponent,
     DescriptionComponent,
     ExchangeRatesComponent,
+    LogInToRegisterComponent,
     ModalComponent,
     MusicPlayerComponent,
     TrackCardComponent,
@@ -42,6 +44,7 @@ import { UserComponent } from './user/user.component';
       { path: '', component: AllComponentComponent } ,
       { path: 'component/:componentId', component: DescriptionComponent },
       { path: 'player', component: MusicPlayerComponent },
+      { path: 'login', component: LogInToRegisterComponent },
     ]),
   ],
   providers: [],
