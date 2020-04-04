@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { SignInInterface } from '../sign-in.interface';
 
 @Component({
   selector: 'app-log-in',
@@ -7,20 +9,40 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./log-in.component.scss']
 })
 export class LogInComponent implements OnInit {
-
-  logInForm = this.fb.group({
-    email: [''],
-    password: [''],
-  });
+  private logInForm: FormGroup;
+  private formData: SignInInterface;
 
   constructor(
     private fb: FormBuilder,
   ) { }
 
   ngOnInit(): void {
+    this.logInForm = this.fb.group({
+      email: [
+        '',
+        [
+          Validators.required,
+          Validators.email,
+          // tslint:disable-next-line:max-line-length
+          Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/),
+        ]
+      ],
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(8),
+          Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/),
+        ]
+      ],
+    });
   }
 
   submit() {
+    if (this.logInForm.valid) {
+      console.log(this.logInForm);
+      this.formData = {...this.logInForm.value};
+      console.log(this.formData);
+    }
   }
-
 }

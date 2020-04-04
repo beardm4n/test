@@ -4,7 +4,6 @@
     (ngSubmit)="submit()"
   >
     <div class="form-container">
-
       <div class="email">
         <label for="mail">Email:</label>
         <input
@@ -22,7 +21,6 @@
           formControlName="password"
         >
       </div>
-
     </div>
 
     <div class="btn-container">
@@ -30,6 +28,7 @@
         mat-raised-button
         color="primary"
         type="submit"
+        [disabled]="logInForm.invalid"
       >
         Sign in
       </button>
