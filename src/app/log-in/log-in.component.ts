@@ -12,7 +12,7 @@ export interface SignInInterface {
   styleUrls: ['./log-in.component.scss']
 })
 export class LogInComponent implements OnInit {
-  private logInForm: FormGroup;
+  public logInForm: FormGroup;
   private formData: SignInInterface;
 
   constructor(
