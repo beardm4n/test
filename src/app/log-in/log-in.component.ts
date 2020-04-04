@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { SignInInterface } from '../sign-in.interface';
+export interface SignInInterface {
+  email: string;
+  password: string;
+}
 
 @Component({
   selector: 'app-log-in',
@@ -40,9 +43,7 @@ export class LogInComponent implements OnInit {
 
   submit() {
     if (this.logInForm.valid) {
-      console.log(this.logInForm);
       this.formData = {...this.logInForm.value};
-      console.log(this.formData);
     }
   }
 }
