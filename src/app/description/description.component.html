@@ -2,7 +2,7 @@
   <h2>{{ component.name }}</h2>
 
   <p>{{ component.description }}</p>
-  <app-user></app-user>
+  <app-user *ngIf="component.name == 'About user'"></app-user>
   <hr>
 
   <div class="links">
