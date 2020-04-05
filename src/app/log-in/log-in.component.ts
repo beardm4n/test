@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+
+import { LogInModalComponent } from '../log-in-modal/log-in-modal.component';
 
 export interface SignInInterface {
   email: string;
@@ -17,6 +20,7 @@ export class LogInComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -45,5 +49,11 @@ export class LogInComponent implements OnInit {
     if (this.logInForm.valid) {
       this.formData = {...this.logInForm.value};
     }
+  }
+
+  openInfo() {
+    this.dialog.open(LogInModalComponent, {
+      width: '200px',
+    });
   }
 }

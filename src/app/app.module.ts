@@ -15,6 +15,7 @@ import { AllComponentComponent } from './all-component/all-component.component';
 import { DescriptionComponent } from './description/description.component';
 import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { LogInModalComponent } from './log-in-modal/log-in-modal.component';
 import { LogInToRegisterComponent } from './log-in-to-register/log-in-to-register.component';
 import { ModalComponent } from './modal/modal.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
@@ -28,6 +29,7 @@ import { UserComponent } from './user/user.component';
     DescriptionComponent,
     ExchangeRatesComponent,
     LogInComponent,
+    LogInModalComponent,
     LogInToRegisterComponent,
     ModalComponent,
     MusicPlayerComponent,
