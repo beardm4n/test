@@ -9,7 +9,8 @@ import { ExchangeRatesService } from '../exchange-rates.service';
 })
 export class ExchangeRatesComponent implements OnInit {
 
-  rates;
+  public rates;
+  public USD: number;
 
   constructor(
     private exchangeRates: ExchangeRatesService,
@@ -19,6 +20,7 @@ export class ExchangeRatesComponent implements OnInit {
     this.rates = this.exchangeRates.getRates()
       .subscribe(res => {
         this.rates = res;
+        this.USD = this.rates.rates.RUB;
       });
   }
 

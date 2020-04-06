@@ -19,6 +19,7 @@ import { LogInModalComponent } from './log-in-modal/log-in-modal.component';
 import { LogInToRegisterComponent } from './log-in-to-register/log-in-to-register.component';
 import { ModalComponent } from './modal/modal.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { TrackCardComponent } from './track-card/track-card.component';
 import { UserComponent } from './user/user.component';
 
@@ -33,6 +34,7 @@ import { UserComponent } from './user/user.component';
     LogInToRegisterComponent,
     ModalComponent,
     MusicPlayerComponent,
+    RegistrationComponent,
     TrackCardComponent,
     UserComponent,
   ],
