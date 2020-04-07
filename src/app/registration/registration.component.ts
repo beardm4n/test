@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { MatDialog } from '@angular/material/dialog';
+
+import { RegModalComponent } from '../reg-modal/reg-modal.component';
 
 interface RegistrationInterface {
   name: string;
@@ -21,6 +24,7 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -87,5 +91,11 @@ export class RegistrationComponent implements OnInit {
         p2.setErrors(null);
       }
     }
+  }
+
+  showInfo() {
+    this.dialog.open(RegModalComponent, {
+      width: '300px',
+    })
   }
 }

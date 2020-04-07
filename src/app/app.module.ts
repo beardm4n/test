@@ -20,6 +20,7 @@ import { LogInToRegisterComponent } from './log-in-to-register/log-in-to-registe
 import { ModalComponent } from './modal/modal.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { RegModalComponent } from './reg-modal/reg-modal.component';
 import { TrackCardComponent } from './track-card/track-card.component';
 import { UserComponent } from './user/user.component';
 
@@ -35,6 +36,7 @@ import { UserComponent } from './user/user.component';
     ModalComponent,
     MusicPlayerComponent,
     RegistrationComponent,
+    RegModalComponent,
     TrackCardComponent,
     UserComponent,
   ],
