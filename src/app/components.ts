@@ -1,6 +1,6 @@
 export const components = [
   {
-    name: 'About users',
+    name: 'About user',
     description: 'User data:',
   },
   {
