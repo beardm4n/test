@@ -81,8 +81,10 @@ export class RegistrationComponent implements OnInit {
   // password matching
   mustMatch(pass1: string, pass2: string) {
     return (formGroup: FormGroup) => {
-      const p1 = formGroup.controls[pass1];
-      const p2 = formGroup.controls[pass2];
+      // const p1 = formGroup.controls[pass1];
+      const p1 = formGroup.get(pass1);
+      // const p2 = formGroup.controls[pass2];
+      const p2 = formGroup.get(pass2);
 
       // set error on confirmPassword if validation fails
       if (p1.value !== p2.value) {
