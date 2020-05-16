@@ -9,6 +9,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 import { AppComponent } from './app.component';
 import { AllComponentComponent } from './all-component/all-component.component';
@@ -56,6 +57,7 @@ import { UserComponent } from './user/user.component';
       { path: 'player', component: MusicPlayerComponent },
       { path: 'login', component: LogInToRegisterComponent },
     ]),
+    InlineSVGModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
