@@ -24,6 +24,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { RegModalComponent } from './reg-modal/reg-modal.component';
 import { TrackCardComponent } from './track-card/track-card.component';
 import { UserComponent } from './user/user.component';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { UserComponent } from './user/user.component';
     RegModalComponent,
     TrackCardComponent,
     UserComponent,
+    RatingComponent,
   ],
   imports: [
     AppRoutingModule,

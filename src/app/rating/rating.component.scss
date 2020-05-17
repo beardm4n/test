@@ -1,0 +1,6 @@
+.stars {
+  i ::ng-deep :hover {
+    cursor: pointer;
+    fill: red;
+  }
+}

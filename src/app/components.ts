@@ -4,8 +4,8 @@ export const components = [
     description: 'User data:',
   },
   {
-    name: 'Second Component',
-    description: 'This is the second component of my app',
+    name: 'Rating',
+    description: 'Rate the work',
   },
   {
     name: 'Third Component',
