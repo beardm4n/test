@@ -1,10 +1,13 @@
 <div class="container">
-  <div class="stars" (click)="click($event)">
-    <i class="star" [inlineSVG]="'./assets/svg/star.svg'"></i>
-    <i class="star" [inlineSVG]="'./assets/svg/star.svg'"></i>
-    <i class="star" [inlineSVG]="'./assets/svg/star.svg'"></i>
-    <i class="star" [inlineSVG]="'./assets/svg/star.svg'"></i>
-    <i class="star" [inlineSVG]="'./assets/svg/star.svg'"></i>
+  <div
+    class="stars"
+    (click)="click($event)"
+    (mouseover)="onMouseover($event)">
+    <i #star class="star" data-rate="1" [inlineSVG]="'./assets/svg/star.svg'"></i>
+    <i #star class="star" data-rate="2" [inlineSVG]="'./assets/svg/star.svg'"></i>
+    <i #star class="star" data-rate="3" [inlineSVG]="'./assets/svg/star.svg'"></i>
+    <i #star class="star" data-rate="4" [inlineSVG]="'./assets/svg/star.svg'"></i>
+    <i #star class="star" data-rate="5" [inlineSVG]="'./assets/svg/star.svg'"></i>
   </div>
   <button>Send</button>
 </div>
