@@ -3,6 +3,7 @@
 
   <p>{{ component.description }}</p>
   <app-user *ngIf="component.name == 'About user'"></app-user>
+  <app-rating *ngIf="component.name === 'Rating'"></app-rating>
   <hr>
 
   <div class="links">
