@@ -22,12 +22,19 @@ export class RatingComponent implements OnInit {
 
   onMouseover(e) {
     if (e.target.tagName === 'I') {
-      const stars = this.stars.map(item => item.nativeElement);
+      const stars = this.stars.map((item) => item.nativeElement);
       if (e.target.classList.contains('star')) {
+        for (let i = 0; i < stars.length; i++) {
+          stars[i].classList.remove('active');
+        }
         e.target.classList.add('active');
-        // for (let i = 0; stars.length; i++) {
-        //
-        // }
+        for (let i = 0; i < stars.length - 1; i++) {
+          if (stars[i].classList.contains('active')) {
+            break;
+          } else {
+            stars[i].classList.add('active');
+          }
+        }
       }
     }
   }
