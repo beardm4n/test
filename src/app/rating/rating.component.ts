@@ -16,7 +16,7 @@ export class RatingComponent implements OnInit {
 
   click(e) {
     if (e.target.tagName === 'I') {
-      e.target.classList.add('active');
+      e.target.classList.add('active', 'current-active');
     }
   }
 
@@ -36,6 +36,12 @@ export class RatingComponent implements OnInit {
           }
         }
       }
+    }
+  }
+
+  onMouseout(e) {
+    if (e.target.tagName === 'I') {
+
     }
   }
 }
