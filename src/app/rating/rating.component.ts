@@ -16,6 +16,10 @@ export class RatingComponent implements OnInit {
 
   click(e) {
     if (e.target.tagName === 'I') {
+      const stars = this.stars.map((item) => item.nativeElement);
+      for (let i = 0; i < stars.length; i++) {
+        stars[i].classList.remove('current-active');
+      }
       e.target.classList.add('active', 'current-active');
     }
   }
