@@ -45,7 +45,17 @@ export class RatingComponent implements OnInit {
 
   onMouseout(e) {
     if (e.target.tagName === 'I') {
-
+      const stars = this.stars.map((item) => item.nativeElement);
+      for (let i = 0; i < stars.length; i++) {
+        stars[i].classList.add('active');
+      }
+      for (let i = stars.length - 1; i >= 0; i--) {
+        if (stars[i].classList.contains('current-active')) {
+          break;
+        } else {
+          stars[i].classList.remove('active');
+        }
+      }
     }
   }
 }
