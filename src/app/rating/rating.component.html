@@ -2,7 +2,8 @@
   <div
     class="stars"
     (click)="click($event)"
-    (mouseover)="onMouseover($event)">
+    (mouseover)="onMouseover($event)"
+    (mouseout)="onMouseout($event)">
     <i #star class="star" data-rate="1" [inlineSVG]="'./assets/svg/star.svg'"></i>
     <i #star class="star" data-rate="2" [inlineSVG]="'./assets/svg/star.svg'"></i>
     <i #star class="star" data-rate="3" [inlineSVG]="'./assets/svg/star.svg'"></i>
