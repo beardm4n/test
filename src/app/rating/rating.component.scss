@@ -1,24 +1,35 @@
-.stars {
+.container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 300px;
-  margin-bottom: 16px;
 
-  i {
-    &:hover {
-      cursor: pointer;
-    }
+  .stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 16px;
 
-    & ::ng-deep svg {
-      width: 50px;
-      height: 50px;
-      pointer-events: none;
-    }
+    i {
+      &:hover {
+        cursor: pointer;
+      }
 
-    &.active ::ng-deep g {
-      fill: red;
+      & ::ng-deep svg {
+        width: 50px;
+        height: 50px;
+        pointer-events: none;
+      }
+
+      &.active ::ng-deep g {
+        fill: #ff0000;
+      }
     }
+  }
+
+  button {
+    align-self: flex-end;
   }
 }
