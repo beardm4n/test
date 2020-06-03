@@ -10,5 +10,9 @@
     <i #star class="star" data-rate="4" [inlineSVG]="'./assets/svg/star.svg'"></i>
     <i #star class="star" data-rate="5" [inlineSVG]="'./assets/svg/star.svg'"></i>
   </div>
-  <button>Send</button>
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="isDisabled"
+    (click)="send()">Send</button>
 </div>

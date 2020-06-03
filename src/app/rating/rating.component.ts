@@ -7,11 +7,20 @@ import {Component, ElementRef, OnInit, QueryList, ViewChildren} from '@angular/c
 })
 export class RatingComponent implements OnInit {
 
+  private rating: number;
+
   @ViewChildren('star') stars: QueryList<ElementRef>
 
   constructor() { }
 
   ngOnInit(): void {
+    this.rating = 0;
+  }
+
+  get isDisabled() {
+    if (this.rating === 0) {
+      return true
+    }
   }
 
   click(e) {
@@ -22,6 +31,7 @@ export class RatingComponent implements OnInit {
       }
       e.target.classList.add('active', 'current-active');
     }
+    this.rating = +e.target.dataset.rate;
   }
 
   onMouseover(e) {
@@ -57,5 +67,9 @@ export class RatingComponent implements OnInit {
         }
       }
     }
+  }
+
+  send() {
+    console.log(this.rating)
   }
 }
