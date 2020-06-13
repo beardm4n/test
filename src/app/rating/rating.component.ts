@@ -70,6 +70,6 @@ export class RatingComponent implements OnInit {
   }
 
   send() {
-    console.log(this.rating)
+    confirm(`You sent rating - ${this.rating} stars`);
   }
 }
